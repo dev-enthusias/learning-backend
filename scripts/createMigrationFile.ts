@@ -12,9 +12,10 @@ function createMigrationFile() {
 
   console.log("Creating file name...");
 
-  // create migration file [timestamp-file-name.sql]
+  // create migration file and seed file [timestamp-create-file-name.sql]
   const timestamp = Date.now();
-  const migrationFileName = `${timestamp}-${fileName}.sql`;
+  const migrationFileName = `${timestamp}-create-${fileName}.sql`;
+  const seedFileName = `${timestamp}-seed-${fileName}.sql`;
 
   console.log("File name created successfully");
 
@@ -24,9 +25,17 @@ function createMigrationFile() {
     "../src/db/migrations",
     migrationFileName,
   );
+  // Also add the file to the seeds directory
+  const seedsFilePath = path.join(
+    dirname(fileURLToPath(import.meta.url)),
+    "../src/db/seeds",
+    seedFileName,
+  );
 
   fs.writeFileSync(filePath, "-- Write your migration here");
+  fs.writeFileSync(seedsFilePath, "-- Write your seed here");
   console.log("Migration file created successfully:", migrationFileName);
+  console.log("Seed file created successfully:", seedFileName);
 
   // exit the process
   process.exit(0);

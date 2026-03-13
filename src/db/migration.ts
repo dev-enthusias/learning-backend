@@ -1,7 +1,7 @@
 import fs from "fs";
+import db from "db";
 import { fileURLToPath } from "url";
 import path, { dirname } from "path";
-import db from "db";
 
 async function migrate() {
   // Locate migrations dir
@@ -16,7 +16,7 @@ async function migrate() {
   // Read the content of each file and execute it against the database
   for (const file of files) {
     const sql = fs.readFileSync(path.join(migrationsDir, file), "utf-8");
-    console.log(sql)
+    console.log(sql);
 
     await db.any(sql);
   }
