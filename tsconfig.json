@@ -1,15 +1,15 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "target": "ES2022",
-    "module": "ESNext",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "esModuleInterop": true,
-    "moduleResolution": "Bundler",
-    "baseUrl": "./src",
-    "paths": {
-      "@modules/*": ["modules/*"]
+    "compilerOptions": {
+        "strict": true,
+        "target": "ES2022",
+        "module": "ESNext",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "esModuleInterop": true,
+        "moduleResolution": "Bundler",
+        "baseUrl": "./src",
+        "paths": {
+            "@modules/*": ["modules/*"]
+        }
     }
-  }
 }

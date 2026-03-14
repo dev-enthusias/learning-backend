@@ -1,34 +1,34 @@
 {
-  "name": "postgresql-express-ts",
-  "version": "1.0.0",
-  "description": "learning how to use postgresql with express and typescript",
-  "main": "dist/server.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "tsx --watch src/server.ts",
-    "seed": "tsx src/db/seed.ts",
-    "seed:create": "tsx scripts/createSeed.ts",
-    "migrate": "tsx src/db/migration.ts",
-    "migrate:create": "tsx scripts/createMigration.ts"
-  },
-  "keywords": [],
-  "author": "Anakor Joshua",
-  "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "@databases/sql": "^3.3.0",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "pg-promise": "^12.6.2"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.4.0",
-    "prettier": "^3.8.1",
-    "prettier-plugin-embed": "^0.5.1",
-    "prettier-plugin-sql": "^0.19.2",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
-  }
+    "name": "postgresql-express-ts",
+    "version": "1.0.0",
+    "description": "learning how to use postgresql with express and typescript",
+    "main": "dist/server.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "dev": "tsx --watch src/server.ts",
+        "seed": "tsx src/db/seed.ts",
+        "seed:create": "tsx scripts/createSeed.ts",
+        "migrate": "tsx src/db/migration.ts",
+        "migrate:create": "tsx scripts/createMigration.ts"
+    },
+    "keywords": [],
+    "author": "Anakor Joshua",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "@databases/sql": "^3.3.0",
+        "dotenv": "^17.3.1",
+        "express": "^5.2.1",
+        "pg-promise": "^12.6.2"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.6",
+        "@types/node": "^25.4.0",
+        "prettier": "^3.8.1",
+        "prettier-plugin-embed": "^0.5.1",
+        "prettier-plugin-sql": "^0.19.2",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
+    }
 }
