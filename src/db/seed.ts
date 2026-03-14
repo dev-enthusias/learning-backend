@@ -8,7 +8,8 @@ async function seed() {
   const seedsDir = path.join(dirname(fileURLToPath(import.meta.url)), "seeds");
 
   // Get all files in the seeds dir
-  const seedFiles = fs.readdirSync(seedsDir);
+  const seedFiles = fs.readdirSync(seedsDir).sort();
+
   // Read the content of each file and execute it against the database
   for (const file of seedFiles) {
     const sql = fs.readFileSync(path.join(seedsDir, file), "utf-8");

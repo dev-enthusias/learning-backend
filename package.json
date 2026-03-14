@@ -8,8 +8,9 @@
     "start": "node dist/server.js",
     "dev": "tsx --watch src/server.ts",
     "seed": "tsx src/db/seed.ts",
+    "seed:create": "tsx scripts/createSeed.ts",
     "migrate": "tsx src/db/migration.ts",
-    "migrate:create": "tsx scripts/createMigrationFile.ts"
+    "migrate:create": "tsx scripts/createMigration.ts"
   },
   "keywords": [],
   "author": "Anakor Joshua",

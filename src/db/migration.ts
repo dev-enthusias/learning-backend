@@ -10,13 +10,12 @@ async function migrate() {
     "migrations",
   );
 
-  // Gt all files in the migrations dir
-  const files = fs.readdirSync(migrationsDir);
+  // Get all files in the migrations dir sorted by name ASC
+  const files = fs.readdirSync(migrationsDir).sort();
 
   // Read the content of each file and execute it against the database
   for (const file of files) {
     const sql = fs.readFileSync(path.join(migrationsDir, file), "utf-8");
-    console.log(sql);
 
     await db.any(sql);
   }
