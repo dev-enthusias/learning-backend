@@ -1,0 +1,14 @@
+{
+    "plugins": ["prettier-plugin-embed", "prettier-plugin-sql"],
+    "tabWidth": 4,
+    "embeddedSqlComments": ["sql"],
+    "sql": {
+        "language": "postgresql",
+        "keywordCase": "upper",
+        "identifierCase": "preserve",
+        "dataTypeCase": "lower",
+        "functionCase": "lower",
+        "logicalOperatorNewline": "after",
+        "commaPosition": "after"
+    }
+}
