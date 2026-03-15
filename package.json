@@ -10,7 +10,8 @@
         "seed": "tsx src/db/seed.ts",
         "seed:create": "tsx scripts/createSeed.ts",
         "migrate": "tsx src/db/migration.ts",
-        "migrate:create": "tsx scripts/createMigration.ts"
+        "migrate:create": "tsx scripts/createMigration.ts",
+        "module:create": "tsx scripts/createModule.ts"
     },
     "keywords": [],
     "author": "Anakor Joshua",
