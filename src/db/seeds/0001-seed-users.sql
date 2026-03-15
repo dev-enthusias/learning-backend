@@ -24,4 +24,4 @@ VALUES
         'Smart',
         '5K0Hq @example.com',
         'Lagos'
-    );
+    ) ON CONFLICT (email) DO NOTHING;
